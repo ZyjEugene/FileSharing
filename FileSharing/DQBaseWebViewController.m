@@ -130,6 +130,11 @@
 
 #pragma mark - Actions
 - (void)onFileSharingClick:(id)sender {
+    // 分享的文件必须是下载到沙盒的本地文件
+    if (![[self.fileURL.absoluteString lowercaseString] hasPrefix:@"file://"]) {
+        NSLog(@"-- \n 网络文件必须下载到本地才能使用UIDocumentInteractionController分享 \n --");
+        return;
+    }
     self.documentController = [UIDocumentInteractionController interactionControllerWithURL:self.fileURL];
     self.documentController.name = self.title;
     BOOL isOpen = [self.documentController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
