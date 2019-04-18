@@ -1,5 +1,5 @@
 # FileSharing
-[App间文件分享](https://github.com/ZyjEugene/FileSharing/blob/master/FileSharing.png)
+App间文件分享![](https://github.com/ZyjEugene/FileSharing/blob/master/FileSharing.png)
 ```
 包含两种需求：
 1、注册App为可共享应用程序，接收应用程序发送方发来的文件路径
