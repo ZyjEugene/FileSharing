@@ -48,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = self.navTitle;
+    self.title = self.navTitle.length > 0 ? self.navTitle : @"共享文件";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_share_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(onFileSharingClick:)];
 
     [self initWebView];
@@ -106,7 +106,8 @@
         }
     } else {
         // 本地文件 xls、pdf、html、txt
-        if (self.pathType == DQFilePathTypeLocalHTML) {
+        if (self.localHtmlName.length > 0 ||
+            self.pathType == DQFilePathTypeLocalHTML) {
             // html
             NSString *path = [[NSBundle mainBundle] pathForResource:self.localHtmlName ofType:@"html"];
             NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];

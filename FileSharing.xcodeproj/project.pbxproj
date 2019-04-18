@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		449EBC3722671C2A002EEE7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449EBC3622671C2A002EEE7E /* AppDelegate.m */; };
-		449EBC3A22671C2A002EEE7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449EBC3922671C2A002EEE7E /* ViewController.m */; };
 		449EBC3F22671C3B002EEE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449EBC3E22671C3B002EEE7E /* Assets.xcassets */; };
 		449EBC4222671C3B002EEE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449EBC4022671C3B002EEE7E /* LaunchScreen.storyboard */; };
 		449EBC4522671C3B002EEE7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 449EBC4422671C3B002EEE7E /* main.m */; };
@@ -48,8 +47,6 @@
 		449EBC3222671C2A002EEE7E /* FileSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449EBC3522671C2A002EEE7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		449EBC3622671C2A002EEE7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		449EBC3822671C2A002EEE7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		449EBC3922671C2A002EEE7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		449EBC3E22671C3B002EEE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449EBC4122671C3B002EEE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449EBC4322671C3B002EEE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,8 +136,6 @@
 			children = (
 				449EBC3522671C2A002EEE7E /* AppDelegate.h */,
 				449EBC3622671C2A002EEE7E /* AppDelegate.m */,
-				449EBC3822671C2A002EEE7E /* ViewController.h */,
-				449EBC3922671C2A002EEE7E /* ViewController.m */,
 				44C5D62522672C870028BBCC /* DQBaseWebViewController.h */,
 				44C5D62422672C870028BBCC /* DQBaseWebViewController.m */,
 				44C5D62722672DD30028BBCC /* Masonry */,
@@ -333,7 +328,6 @@
 			files = (
 				44C5D64922672DD30028BBCC /* MASViewConstraint.m in Sources */,
 				44C5D64A22672DD30028BBCC /* MASViewAttribute.m in Sources */,
-				449EBC3A22671C2A002EEE7E /* ViewController.m in Sources */,
 				44C5D62622672C870028BBCC /* DQBaseWebViewController.m in Sources */,
 				44C5D64622672DD30028BBCC /* NSArray+MASAdditions.m in Sources */,
 				44C5D64222672DD30028BBCC /* ViewController+MASAdditions.m in Sources */,

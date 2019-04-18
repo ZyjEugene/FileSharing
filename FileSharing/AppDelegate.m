@@ -7,12 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "DQBaseWebViewController.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) DQBaseWebViewController *view;
+@property (nonatomic, strong) DQBaseWebViewController *webView;
 
 @end
 
@@ -20,18 +19,19 @@
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation {
-    // dosomething
+    // to do something
     return YES;
 }
 #else
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
-    // dosomething
+    // to do something
     NSString *str = [NSString stringWithFormat:@"\n发送请求的应用程序的 Bundle ID：%@\n\n文件的NSURL：%@", options[UIApplicationOpenURLOptionsSourceApplicationKey], url];
     NSLog(@"options:%@",str);
     if (options) {
-        self.view.pathType = DQFilePathTypeLocalFile;
-        self.view.fileURL = url;
-        [self.view loadFileData];
+        // 接受发送应用程序方发来的文件路径
+        self.webView.pathType = DQFilePathTypeLocalFile;
+        self.webView.fileURL = url;
+        [self.webView loadFileData];
     }
     return YES;
 }
@@ -40,8 +40,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    self.view = [[DQBaseWebViewController alloc] init];
-    UINavigationController *navController    = [[UINavigationController alloc] initWithRootViewController:self.view];
+    self.webView = [[DQBaseWebViewController alloc] init];
+    UINavigationController *navController    = [[UINavigationController alloc] initWithRootViewController:self.webView];
     self.window                    = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor    = [UIColor whiteColor];
     self.window.rootViewController = navController;
