@@ -1,5 +1,5 @@
 # FileSharing
-App间文件分享
+App间文件分享 ![](FileSharing.MP4)
 
 ```
 包含两种需求：
