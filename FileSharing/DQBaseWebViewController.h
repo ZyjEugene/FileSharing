@@ -4,7 +4,7 @@
 //
 //  Created by Heidi on 2017/9/22.
 //  Copyright © 2017年 machinsight. All rights reserved.
-//
+//  文档预览及文档共享
 
 #import <UIKit/UIKit.h>
 
@@ -33,8 +33,6 @@ typedef NS_ENUM(NSInteger, DQFilePathType) {
 /** 文件路径类型 */
 @property (nonatomic, assign) DQFilePathType pathType;
 
-- (void)loadFileData;
-
 #pragma mark - 初始化方法二
 /**
  初始化本地、网络文件展示控制器
@@ -48,5 +46,8 @@ typedef NS_ENUM(NSInteger, DQFilePathType) {
 - (instancetype)initWithViewTitle:(NSString *)title
                           fileURl:(NSURL *)fileURL
                      filePathType:(DQFilePathType)pathType;
+
+#pragma mark - 加载文件
+- (void)loadFileData;
 
 @end 

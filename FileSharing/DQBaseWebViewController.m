@@ -6,7 +6,6 @@
 //  Copyright © 2017年 machinsight. All rights reserved.
 //
 
-//#import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 #import "DQBaseWebViewController.h"
 #import "Masonry.h"
@@ -17,7 +16,7 @@
 @property (nonatomic, strong) WKWebView *wkWebView;
 /** 进度条 */
 @property (nonatomic, strong) UIProgressView *progressView;
-/** 直接调用分享页面，一定要全局文档对象 */
+/** 直接调用分享页面，一定要全局文档交互对象 */
 @property(nonatomic, strong) UIDocumentInteractionController *documentController;
 
 @end
@@ -192,12 +191,7 @@
 - (WKWebView *)wkWebView {
     if (!_wkWebView) {
         _wkWebView = [[WKWebView alloc] init];
-        [self.view addSubview:_wkWebView];
-        if (@available(iOS 11.0, *)) {
-            _wkWebView.scrollView.contentInset = UIEdgeInsetsZero;
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
+        [self.view addSubview:_wkWebView]; 
     }
     return _wkWebView;
 }
